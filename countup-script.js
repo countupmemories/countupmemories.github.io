@@ -1,4 +1,4 @@
-const startDate = new Date("2018-03-18");
+const startDate = new Date("2023-06-20");
         function updateCountUp() {
             const currentDate = new Date();
             const timeDiff = currentDate.getTime() - startDate.getTime();
