@@ -1,0 +1,12 @@
+<link href='https://fonts.googleapis.com/css?family=Anek Bangla' rel='stylesheet'>
+<style>
+body {
+    font-family: 'Anek Bangla';font-size: 22px;
+}
+
+
+<link href='https://fonts.googleapis.com/css?family=Tiro Bangla' rel='stylesheet'>
+<style>
+body {
+    font-family: 'Tiro Bangla';font-size: 22px;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* Background animation styles */
+        body, #demo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+.quote-container {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #D1D1D1;
+  text-align: center;
+  margin: 20px;
+}
+    </style>
+</head>
+<body>
+    <canvas id="demo"></canvas>
+    <div class="container">
+        <div class="form-container">
+            <div class="centered-photo">
+                <img src="1.jpg" alt="">
+            </div>
+<div class="myname">Samia Akter Aisu</div>
+
+
+
+
+
+
+            
+            <div class="import-container">
+           <label for="relationship-status" class="form-label">Relationship Status:</label>
+            <select id="relationship-status">
+                <option value="in-relationship" selected>In a Relationship</option>
+                <option value="bff">Best Friends Forever</option>
+                <option value="got-married">Got Married</option>
+                <option value="single">Single</option>
+                
+            </select><p>
+                <label for="boy-photo" class="import-label">Photo 1</label>
+                <input type="file" id="boy-photo" accept="image/*">
+            </div>
+  <label for="boy-name" class="form-label">Left Name:</label>
+            <input type="text" id="boy-name" placeholder="Enter Left Name">
+           
+            <div class="import-container" id="girl-photo-container">
+                <label for="girl-photo" class="import-label">Photo 2</label>
+                <input type="file" id="girl-photo" accept="image/*">
+            </div>
+           <label for="girl-name" class="form-label" id="girl-name-label">Right Name:</label>
+            <input type="text" id="girl-name" placeholder="Enter Right Name">
+
+ <label for="start-date" class="form-label">Date:</label>
+            
+            <input type="date" id="start-date">
+            <button id="generate">Generate</button>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="profile-container" id="profile">
+            <div class="images">
+                <img class="image" id="boy-image" src="#" alt="">
+                <div class="center-heart" style="display: none;">♡</div>
+                <img class="image" id="girl-image" src="#" alt="" style="display: none;">
+            </div>
+            <div class="name">
+                <div class="boy-name"></div>
+                <div class="symbol">&</div>
+                <div class="girl-name"></div>
+            </div>
+            <div class="status-container">
+                <div class="status-line"></div>
+                <div class="status-text"></div>
+                <div class="status-line"></div>
+            </div>
+            <div class="wbt">We've been together for</div>
+            <div class="countup">
+                <div class="countup-box">
+                    <div class="countup-label">Years</div>
+                    <div class="countup-value" id="years">0</div>
+                </div>
+                <div class="countup-box">
+                    <div class="countup-label">Months</div>
+                    <div class="countup-value" id="months">0</div>
+                </div>
+                <div class="countup-box">
+                    <div class="countup-label">Days</div>
+                    <div class="countup-value" id="days">0</div>
+                </div>
+                <div class="countup-box">
+                    <div class="countup-label">Hours</div>
+                    <div class="countup-value" id="hours">0</div>
+                </div>
+                <div class="countup-box">
+                    <div class="countup-label">Minutes</div>
+                    <div class="countup-value" id="minutes">0</div>
+                </div>
+                <div class="countup-box">
+                    <div class="countup-label">Seconds</div>
+                    <div class="countup-value" id="seconds">0</div>
+                </div>
+            </div>
+
+            <div class="quote-container">
+                <div id="quote">fddd</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="./dist/stripe-gradient.js"></script>
+    <script src="time.js"></script>
+    <script src="script.js"></script>
+    <script>
+        (function() {
+            'use strict';
+            $('#demo').gradient({
+                colors: ['#3F314C', '#3D0C0E', '#19282D', '#3D3115']
+            });
+        })();
+    </script>
+
+<script>
+// Array of quotes for different relationship statuses
+var quotes = {
+    "single": [
+        "Embracing the freedom of being single.",
+        "Single and loving it.",
+        "Living life on my own terms."
+    ],
+    "in-relationship": [
+        "Celebrating the joys of togetherness.",
+        "Love is in the air!",
+        "Building memories together."
+    ],
+    "bff": [
+        "Best friends forever!",
+        "Forever grateful for this friendship.",
+        "Creating unforgettable moments."
+    ],
+    "got-married": [
+        "Starting a new chapter together.",
+        "Forever united in love and marriage.",
+        "Two souls, one journey."
+    ],
+    "custom": [
+        "Creating our own unique story.",
+        "Defining our own relationship.",
+        "Our love, our rules."
+    ]
+};
+
+// Get the select element for relationship status
+var relationshipStatusSelect = document.getElementById("relationship-status");
+
+// Get the quote container element
+var quoteContainer = document.getElementById("quote");
+
+// Add an event listener for when the relationship status changes
+relationshipStatusSelect.addEventListener("change", function() {
+    var selectedStatus = relationshipStatusSelect.value;
+    
+    // Get the array of quotes based on the selected status
+    var statusQuotes = quotes[selectedStatus];
+    
+    // Choose a random quote from the array
+    var randomQuoteIndex = Math.floor(Math.random() * statusQuotes.length);
+    var randomQuote = statusQuotes[randomQuoteIndex];
+    
+    // Display the random quote
+    quoteContainer.textContent = randomQuote;
+});
+
+// Trigger the change event initially to set the initial quote
+relationshipStatusSelect.dispatchEvent(new Event("change"));
+
+</script>
+</body>
+</html>

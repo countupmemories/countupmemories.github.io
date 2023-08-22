@@ -1,0 +1,228 @@
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+
+justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    perspective: 1px; /* Create a 3D space for parallax effect */
+    overflow-x: hidden; /* Hide horizontal scrollbars */
+}
+
+.form-container {
+    color: #EBEBEB;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 12px;
+    width: 80px;
+}
+
+.form-label {
+    font-size: 12px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"] {
+    width: calc(100% - 25px); /* Reduce width by 20px and padding by 5px */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.profile-container {
+    display: none;
+    
+    border-radius: 10px;
+    padding: 20px;
+    
+    text-align: center;
+    width: 500px;
+    transform: translateZ(-1px) scale(2); /* Parallax effect */
+    background-position: center 30%; /* Adjust the vertical shift */
+}
+
+
+
+.centered-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.centered-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #fff;
+}
+
+
+.images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 15px;
+    border: 1px solid #fff;
+}
+
+.center-heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #e74c3c;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+
+.myname {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #EFEFEF;
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #EFEFEF;
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+}
+
+
+
+.symbol {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: #e74c3c;
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+    display: none;
+}
+
+
+.status-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.status-line {
+    flex: 1;
+    border-top: 1px dashed #ccc;
+}
+
+.status-text {
+    margin: 0 10px;
+    color: #D1D1D1;
+}
+
+.wbt {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #D1D1D1;
+}
+
+.countup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.countup-box {
+    text-align: center;
+    margin: 5px;
+}
+
+.countup-label {
+    color: #D1D1D1;
+    font-size: 12px;
+}
+
+.countup-value {
+    color: #e74c3c;
+    font-size: 20px;
+}
+
+#generate {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+#generate:hover {
+    background-color: #c0392b;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .form-container,
+    .profile-container {
+        width: 90%;
+        height: auto;
+        margin: 20px;
+        padding: 10px;
+    }
+    
+    /* ... Adjust othe
+}
