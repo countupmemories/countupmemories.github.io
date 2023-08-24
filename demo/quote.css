@@ -1,0 +1,12 @@
+/* quote.css */
+.quote-container {
+  text-align: center;
+  padding: 5px;
+}
+
+#quote {
+  font-size: 13px;
+  color: #ffffff;
+  margin-top: 10px;
+  font-family: 'Courier New', monospace;
+}
