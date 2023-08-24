@@ -1,6 +1,6 @@
 // time.js
 function calculateTimeDifference() {
-    var startDate = new Date('2001-08-27'); // Specify your start date here
+    var startDate = new Date('2018-08-27'); // Specify your start date here
     var currentDate = new Date();
 
     var yearDiff = currentDate.getFullYear() - startDate.getFullYear();
