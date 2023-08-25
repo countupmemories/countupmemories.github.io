@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css"> <!-- Link to your main CSS file -->
+<link rel="stylesheet" href="name.css"> <!-- Link to your name-specific CSS file -->
+<link rel="stylesheet" href="relation-text.css"> <!-- Link to your relation text-specific CSS file -->
+<link rel="stylesheet" href="time.css"> <!-- Link to your time-specific CSS file -->
+<link rel="stylesheet" href="photo.css"> <!-- Link to your updated photo-specific CSS file -->
+<link rel="stylesheet" href="quote.css"> <!-- Link to your updated photo-specific CSS file -->
+<link rel="stylesheet" href="login.css"> <!-- Link to your login CSS file -->
+
+<title>Tanvir & Tasfiya</title>
+</head>
+<body>
+  <div id="login-prompt">
+    <h1>Enter your username and password</h1>
+    <input type="text" id="username-input" placeholder="Username">
+    <input type="password" id="password-input" placeholder="Password">
+    <div id="login-incorrect" class="error-message"></div>
+    <button onclick="checkLogin()">Login</button>
+  </div>
+
+  <div id="content-container" style="display: none;">
+    <div class="photo-container">
+      <div class="images">
+        <img class="image" src="pic/1.jpg" alt="Photo 1">
+        <div class="center-heart">
+          <div class="heartbeat">♡</div>
+        </div>
+        <img class="image" src="pic/2.jpg" alt="Photo 2">
+      </div>
+    </div>
+    <div class="name-container">
+      <div class="names">Riyad <span class="ampersand">&</span> Reshmi</div>
+    </div>
+    <div class="relation-container">
+      <div class="textline-container">
+        <div class="line"></div>
+        <div class="line-text">In a relationship</div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="wbt">Since:<span class="date"> 17 August 2022 </span>We have been together for</div>
+
+    <div class="countup">
+      <div class="countup-box">
+        <div class="countup-label">Years</div>
+        <div class="countup-value" id="years">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Months</div>
+        <div class="countup-value" id="months">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Days</div>
+        <div class="countup-value" id="days">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Hours</div>
+        <div class="countup-value" id="hours">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Minutes</div>
+        <div class="countup-value" id="minutes">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Seconds</div>
+        <div class="countup-value" id="seconds">0</div>
+      </div>
+    </div>
+    <div class="quote-container">
+      <div id="quote"></div>
+    </div>
+  </div>
+
+  <script src="time.js"></script> <!-- Link to your time.js script -->
+  <script src="quote.js"></script> <!-- Link to your quote.js script -->
+  <script src="login.js"></script> <!-- Link to your login.js script -->
+</body>
+</html>
