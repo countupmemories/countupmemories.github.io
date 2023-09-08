@@ -1,0 +1,17 @@
+.wbt {
+    display: flex;
+    font-size: 13px;
+    color: #000000;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .date {
+    font-family: "Arial", sans-serif;
+    padding-left: 10px; /* Adjust the left padding value for space */
+    padding-right: 10px; /* Adjust the right padding value for space */
+    color: rgb(65, 65, 65);
+  }
+  
