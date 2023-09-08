@@ -1,6 +1,6 @@
 function checkLogin() {
-    const username = "sayemsukhi"; // Change this to your desired username
-    const password = "cm123@"; // Change this to your desired password
+    const username = "sukhi"; // Change this to your desired username
+    const password = "1122"; // Change this to your desired password
     const usernameInput = document.getElementById("username-input").value;
     const passwordInput = document.getElementById("password-input").value;
     const loginIncorrect = document.getElementById("login-incorrect");
