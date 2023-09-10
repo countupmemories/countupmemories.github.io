@@ -1,0 +1,24 @@
+/* time.css */
+.countup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
+}
+
+.countup-box {
+  text-align: center;
+  margin: 5px;
+}
+
+.countup-label {
+  font-size: 14px;
+  color: #000000;
+}
+
+.countup-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000; /* Adjust the color as needed */
+}
