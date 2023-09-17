@@ -1,0 +1,62 @@
+/* Styling for the login prompt */
+#login-prompt {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Adds rounded corners to the prompt */
+  }
+  
+  /* Styling for the "Enter your username and password to access this page:" text */
+  #login-prompt h1 {
+    color: #007BFF; /* Add your desired color here */
+    font-size: 15px; /* Adjust the font size as needed */
+  }
+  
+  /* Styling for input fields */
+  #username-input,
+  #password-input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out; /* Smooth border color transition on focus */
+  }
+  
+  /* Styling for the error message */
+  .error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the login button */
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition on hover */
+  }
+  
+  /* Hover effect for the login button */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style for the input boxes on focus */
+  #username-input:focus,
+  #password-input:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow on focus */
+  }
+  
