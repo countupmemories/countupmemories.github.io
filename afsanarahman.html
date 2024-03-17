@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Afsana</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f7f7f7;
+        font-family: Arial, sans-serif;
+    }
+body {
+    background-image: url('bg/1264.jpg');
+    background-size: cover; /* This ensures the background image covers the entire screen */
+}
+    
+    .container {
+        text-align: center;
+    }
+    
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+    font-family: Arial, sans-serif;
+}
+    .birthday-text {
+        font-size: 36px;
+        color: #ff3399;
+        opacity: 0;
+        animation: fade-in 2s forwards;
+        margin-bottom: 20px;
+    }
+    
+    .birthday-message {
+        font-size: 20px;
+        color: #333;
+        opacity: 0;
+        animation: slide-in 2s forwards;
+    }
+    
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slide-in {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+.countup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
+}
+
+.countup-box {
+  text-align: center;
+  margin: 5px;
+}
+
+.countup-label {
+  font-size: 14px;
+  color: #000000;
+}
+
+.countup-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000; 
+}
+
+.profile-picture {
+    width: 150px; /* Adjust the width of the profile picture */
+    height: 150px; /* Adjust the height of the profile picture */
+    border-radius: 50%; /* Make it round */
+    overflow: hidden; /* Hide overflow */
+    margin-right: 20px; /* Add spacing between the picture and text */
+    display: flex; /* Center image */
+    justify-content: center; /* Center image */
+    align-items: center; /* Center image */
+}
+
+.profile-picture img {
+    width: auto; /* Make the image fit the container */
+    height: 100%; /* Make the image fit the container */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="profile-picture">
+        <img src="afsana6365.jpg" alt="Misti's Photo">
+    </div>
+    <div class="birthday-text">Happy Birthday, Afsana!</div>
+    
+    <div class="birthday-message">
+        <p id="birthday-wishes"></p>
+    </div>
+
+    <div class="countup">
+      <div class="countup-box">
+        <div class="countup-label">Years</div>
+        <div class="countup-value" id="years">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Months</div>
+        <div class="countup-value" id="months">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Days</div>
+        <div class="countup-value" id="days">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Hours</div>
+        <div class="countup-value" id="hours">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Minutes</div>
+        <div class="countup-value" id="minutes">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Seconds</div>
+        <div class="countup-value" id="seconds">0</div>
+      </div>
+    </div>
+</div>
+
+<script>
+    // Array of birthday messages
+    var birthdayMessages = [
+        "On your special day, may you be surrounded by love, laughter, and countless blessings. Here's to another amazing year ahead!",
+        "May this year bring you all the joy and happiness your heart can hold. You deserve the world!",
+        "Today, I celebrate the incredible person you are and the beautiful soul you possess. May your day be as fantastic as you are!",
+        "I want to express how grateful I am to have you in my life. Your friendship means the world to me. Have a fantastic day!",
+        "Sending you the warmest wishes and the biggest hugs on your special day. May this year be filled with love, laughter, and unforgettable memories!",
+        "Thank you for being such an amazing friend and for bringing so much joy into my life. Cheers to many more years of friendship!"
+    ];
+
+    // Select a random message
+    var randomIndex = Math.floor(Math.random() * birthdayMessages.length);
+
+    // Update message
+    document.getElementById("birthday-wishes").textContent = birthdayMessages[randomIndex];
+</script>
+
+<script>
+// time.js
+function calculateTimeDifference() {
+    var startDate = new Date('2005-03-17');
+    var currentDate = new Date();
+
+    var yearDiff = currentDate.getFullYear() - startDate.getFullYear();
+    var monthDiff = currentDate.getMonth() - startDate.getMonth();
+    var dayDiff = currentDate.getDate() - startDate.getDate();
+
+    if (dayDiff < 0) {
+        monthDiff--;
+        dayDiff += new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
+    }
+    if (monthDiff < 0) {
+        yearDiff--;
+        monthDiff += 12;
+    }
+
+    var hourDiff = currentDate.getHours() - startDate.getHours();
+    var minuteDiff = currentDate.getMinutes() - startDate.getMinutes();
+    var secondDiff = currentDate.getSeconds() - startDate.getSeconds();
+
+    if (secondDiff < 0) {
+        minuteDiff--;
+        secondDiff += 60;
+    }
+    if (minuteDiff < 0) {
+        hourDiff--;
+        minuteDiff += 60;
+    }
+    if (hourDiff < 0) {
+        dayDiff--;
+        hourDiff += 24;
+    }
+
+    document.getElementById('years').textContent = yearDiff;
+    document.getElementById('months').textContent = monthDiff;
+    document.getElementById('days').textContent = dayDiff;
+    document.getElementById('hours').textContent = hourDiff;
+    document.getElementById('minutes').textContent = minuteDiff;
+    document.getElementById('seconds').textContent = secondDiff;
+}
+
+// Call the calculateTimeDifference function initially
+calculateTimeDifference();
+
+// Update the countdown every second
+setInterval(calculateTimeDifference, 1000);
+</script>
+</body>
+</html>
