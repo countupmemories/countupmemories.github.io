@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: aliceblue;
+  
+}
+
+body {
+    background-image: url('6.jpg');
+    background-size: cover; /* This ensures the background image covers the entire screen */
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* name.css */
+.names {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  font-family: 'Great Vibes', cursive;
+}
+
+.ampersand {
+color: #ff0000;
+font-size: 24px;
+margin-right: 10px;
+margin-left: 10px;
+}
+
+.name-container {
+  text-align: center;
+  margin-top: 20px;
+  
+}
+
+.name-text {
+  display: inline-block;
+  margin-right: 10px; 
+}
+
+/* photo.css */
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  
+}
+
+.image {
+  max-width: 130px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1s forwards;
+}
+
+.center-heart {
+  position: absolute;
+  
+}
+
+.heartbeat {
+  color: #B02932;
+  font-size: 25px;
+  animation: heartbeat 3s infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+/* quote.css */
+.quote-container {
+  text-align: center;
+  padding: 5px;
+}
+
+#quote {
+  font-size: 13px;
+  color: #000000;
+  margin-top: 10px;
+  font-family: 'Courier New', monospace;
+}
+/* relation-text.css */
+.relation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.textline-container {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.line {
+  height: 1px;
+  width: 50px;
+  background-color: #000000;
+}
+
+.line-text {
+  padding: 0 10px;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* time.css */
+.countup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
+}
+
+.countup-box {
+  text-align: center;
+  margin: 5px;
+}
+
+.countup-label {
+  font-size: 14px;
+  color: #000000;
+}
+
+.countup-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000; 
+}
+.wbt {
+  display: flex;
+  font-size: 13px;
+  color: #000000;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.date {
+  font-family: "Arial", sans-serif;
+  padding-left: 10px; 
+  padding-right: 10px; 
+  color: rgb(65, 65, 65);
+}
+
+</style>
+
+<title>Samiya & Nishat</title>
+</head>
+<body>
+ 
+  <div id="content-container">
+    <div class="photo-container">
+      <div class="images">
+        <img class="image" src="bbf1.jpg" alt="Photo 1">
+        <div class="center-heart">
+          <div class="heartbeat">♡</div>
+        </div>
+        <img class="image" src="bbf2.jpg" alt="Photo 2">
+      </div>
+    </div>
+    <div class="name-container">
+      <div class="names">Samiya<span class="ampersand">&</span>Nishat</div>
+    </div>
+    <div class="relation-container">
+      <div class="textline-container">
+        <div class="line"></div>
+        <div class="line-text">Best Friend Forever</div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="wbt">Since:<span class="date">01 March 2024</span>We have been together for:</div>
+
+    <div class="countup">
+      <div class="countup-box">
+        <div class="countup-label">Years</div>
+        <div class="countup-value" id="years">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Months</div>
+        <div class="countup-value" id="months">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Days</div>
+        <div class="countup-value" id="days">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Hours</div>
+        <div class="countup-value" id="hours">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Minutes</div>
+        <div class="countup-value" id="minutes">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Seconds</div>
+        <div class="countup-value" id="seconds">0</div>
+      </div>
+    </div>
+    <div class="quote-container">
+      <div id="quote"></div>
+    </div>
+  </div>
+
+  <script>
+  // time.js
+function calculateTimeDifference() {
+    var startDate = new Date('2024-03-01');
+    var currentDate = new Date();
+
+    var yearDiff = currentDate.getFullYear() - startDate.getFullYear();
+    var monthDiff = currentDate.getMonth() - startDate.getMonth();
+    var dayDiff = currentDate.getDate() - startDate.getDate();
+
+    if (dayDiff < 0) {
+        monthDiff--;
+        dayDiff += new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
+    }
+    if (monthDiff < 0) {
+        yearDiff--;
+        monthDiff += 12;
+    }
+
+    var hourDiff = currentDate.getHours() - startDate.getHours();
+    var minuteDiff = currentDate.getMinutes() - startDate.getMinutes();
+    var secondDiff = currentDate.getSeconds() - startDate.getSeconds();
+
+    if (secondDiff < 0) {
+        minuteDiff--;
+        secondDiff += 60;
+    }
+    if (minuteDiff < 0) {
+        hourDiff--;
+        minuteDiff += 60;
+    }
+    if (hourDiff < 0) {
+        dayDiff--;
+        hourDiff += 24;
+    }
+
+    document.getElementById('years').textContent = yearDiff;
+    document.getElementById('months').textContent = monthDiff;
+    document.getElementById('days').textContent = dayDiff;
+    document.getElementById('hours').textContent = hourDiff;
+    document.getElementById('minutes').textContent = minuteDiff;
+    document.getElementById('seconds').textContent = secondDiff;
+}
+
+// Call the calculateTimeDifference function initially
+calculateTimeDifference();
+
+// Update the countdown every second
+setInterval(calculateTimeDifference, 1000);
+  </script>
+  <script>
+  
+const quotes = [
+"In the tapestry of life, love is the most vibrant and intricate thread.","Love is a language spoken by the heart and understood by souls.","Just as sunlight warms the earth, love nourishes the depths of our being.","In every smile exchanged, love finds its reflection in two hearts.","Like a steady flame, love burns brightly even in the darkest of times.","In the garden of emotions, love is the most delicate and cherished bloom.","Love is the bridge that connects two souls, transcending time and distance.","In the realm of emotions, love is the crown jewel that reigns supreme.","Love is the symphony that plays a melody only two hearts can hear.","Like raindrops on a window, love leaves traces of beauty in its wake.","In the silence of connection, love speaks volumes without uttering a word.","In the constellation of feelings, love shines brightest among the stars.","Love is the anchor that keeps us steady amidst the storms of life.","Like a book with endless chapters, love unfolds its story through time.","In the dance of emotions, love is the graceful waltz that sweeps us off our feet.","Love is the melody that lingers long after the song has ended.","In the realm of possibilities, love is the one that defies all odds.","Love is the whisper in the wind that carries the secrets of two hearts.","Like a mirror reflecting souls, love reveals the truest versions of ourselves.","In the gallery of feelings, love is the masterpiece that takes our breath away.","Love is the flame that warms our hearts and lights up our lives.","In the garden of connections, love is the most radiant and colorful blossom.","Love is the treasure map that leads us to the riches of the heart.","Like footprints in the sand, love leaves an indelible mark on our souls.","Love is the ink that writes the story of a lifetime on the pages of existence.","Love is the sunrise that bathes our world in warmth and hope.","In the vastness of emotions, love is the constellation that guides us home.","Love is the melody that plays on, even when the song has changed.","Like a gentle breeze, love caresses our spirits and soothes our souls.","In the tapestry of connections, love is the strongest and most enduring thread.","Love is the puzzle piece that completes the picture of our lives.","Love is the echo that reverberates in the chambers of the heart.","In the grand symphony of existence, love is the most enchanting note.","Love is the key that unlocks the door to a world of boundless possibilities.","Love is the compass that guides us through the maze of emotions.","In the book of relationships, love is the story that captivates every page.","Love is the gentle rain that nurtures the garden of our hearts.","In the realm of feelings, love is the masterpiece painted by two souls.","Love is the moonlight that illuminates our path on the darkest nights.","Love is the symphony that harmonizes the melodies of two distinct lives.","In the tapestry of connections, love is the golden thread that never fades.","Love is the mirror that reflects the beauty and depth of our souls.","Love is the glue that binds two hearts, creating an unbreakable bond.","In the realm of eternity, love is the timeless force that continues to bloom."
+       
+];
+
+function getRandomQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex];
+}
+
+function displayRandomQuote() {
+  const quoteElement = document.getElementById("quote");
+  const quoteText = getRandomQuote();
+  quoteElement.textContent = quoteText;
+}
+
+displayRandomQuote();
+
+</script> 
+ 
+</body>
+</html>
