@@ -1,0 +1,155 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: aliceblue;
+  background-image: url('bg.jpg');
+  background-size: cover;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Styling for names */
+.names {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  font-family: 'Great Vibes', cursive;
+}
+
+.ampersand {
+  color: #ff0000;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.name-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Styling for images */
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.image {
+  max-width: 130px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1s forwards;
+}
+
+.center-heart {
+  position: absolute;
+}
+
+.heartbeat {
+  color: #B02932;
+  font-size: 25px;
+  animation: heartbeat 3s infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Styling for relationship line */
+.relation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.textline-container {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.line {
+  height: 1px;
+  width: 50px;
+  background-color: #000000;
+}
+
+.line-text {
+  padding: 0 10px;
+  font-size: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Styling for time counter */
+.countup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  font-family: "Lucida Console", monospace;
+}
+
+.countup-box {
+  text-align: center;
+  margin: 5px;
+}
+
+.countup-label {
+  font-size: 14px;
+  color: #000000;
+}
+
+.countup-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+/* Styling for wbt */
+.wbt {
+  display: flex;
+  font-size: 13px;
+  color: #000000;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  font-family: "Lucida Console", monospace;
+}
+
+
+
+/* Quote container styling */
+.quote-container {
+  text-align: center;
+  padding: 5px;
+}
+
+#quote {
+  font-size: 13px;
+  color: #000000;
+  margin-top: 10px;
+  font-family: 'Courier New', monospace;
+}
