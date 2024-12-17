@@ -1,6 +1,6 @@
 // Function to calculate the time difference
 function calculateTimeDifference() {
-    const startDate = new Date('2021-10-16');
+    const startDate = new Date('2021-10-16T10:30:00');
     const currentDate = new Date();
 
     let years = currentDate.getFullYear() - startDate.getFullYear();
