@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    
+    <title>Prodip & Jui - Our Journey</title>
+</head>
+
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: aliceblue;
+  background-image: url('background/bg1.jpg');
+  background-size: cover;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Styling for names */
+.names {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  font-family: 'Great Vibes', cursive;
+}
+
+.ampersand {
+  color: #ff0000;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.name-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Styling for images */
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.image {
+  max-width: 130px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1s forwards;
+}
+
+.center-heart {
+  position: absolute;
+}
+
+.heartbeat {
+  color: #B02932;
+  font-size: 25px;
+  animation: heartbeat 3s infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Styling for relationship line */
+.relation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.textline-container {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.line {
+  height: 1px;
+  width: 50px;
+  background-color: #000000;
+}
+
+.line-text {
+  padding: 0 10px;
+  font-size: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Styling for time counter */
+.countup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  font-family: "Lucida Console", monospace;
+}
+
+.countup-box {
+  text-align: center;
+  margin: 5px;
+}
+
+.countup-label {
+  font-size: 14px;
+  color: #000000;
+}
+
+.countup-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+/* Styling for wbt */
+.wbt {
+  display: flex;
+  font-size: 13px;
+  color: #000000;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  font-family: "Lucida Console", monospace;
+}
+
+
+
+/* Quote container styling */
+.quote-container {
+  text-align: center;
+  padding: 5px;
+}
+
+#quote {
+  font-size: 13px;
+  color: #000000;
+  margin-top: 10px;
+  font-family: 'Courier New', monospace;
+}
+
+
+
+
+</style>
+<body>
+  <div id="content-container">
+    <div class="photo-container">
+      <div class="images">
+        <img class="image" src="photos/0001-left.jpg" alt="Photo 1">
+        <div class="center-heart">
+          <div class="heartbeat">♡</div>
+        </div>
+        <img class="image" src="photos/0001-right.jpg" alt="Photo 2">
+      </div>
+    </div>
+
+    <div class="name-container">
+      <div class="names">Prodip<span class="ampersand">&</span>Jui</div>
+    </div>
+
+    <div class="relation-container">
+      <div class="textline-container">
+        <div class="line"></div>
+        <div class="line-text">In A Relationship</div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="wbt">🌸 4 March 2024 🌸</div>
+
+    <div class="countup">
+      <div class="countup-box">
+        <div class="countup-label">Years</div>
+        <div class="countup-value" id="years">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Months</div>
+        <div class="countup-value" id="months">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Days</div>
+        <div class="countup-value" id="days">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Hours</div>
+        <div class="countup-value" id="hours">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Minutes</div>
+        <div class="countup-value" id="minutes">0</div>
+      </div>
+      <div class="countup-box">
+        <div class="countup-label">Seconds</div>
+        <div class="countup-value" id="seconds">0</div>
+      </div>
+    </div>
+
+    <div class="quote-container">
+      <div id="quote"></div>
+    </div>
+  </div>
+
+  <script>
+// Function to calculate the time difference
+function calculateTimeDifference() {
+    const startDate = new Date('2024-03-04');
+    const currentDate = new Date();
+
+    let years = currentDate.getFullYear() - startDate.getFullYear();
+    let months = currentDate.getMonth() - startDate.getMonth();
+    let days = currentDate.getDate() - startDate.getDate();
+
+    if (days < 0) {
+        months--;
+        days += new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
+    }
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    const hours = currentDate.getHours();
+    const minutes = currentDate.getMinutes();
+    const seconds = currentDate.getSeconds();
+
+    document.getElementById('years').textContent = years;
+    document.getElementById('months').textContent = months;
+    document.getElementById('days').textContent = days;
+    document.getElementById('hours').textContent = hours;
+    document.getElementById('minutes').textContent = minutes;
+    document.getElementById('seconds').textContent = seconds;
+}
+
+// Call the function initially and update every second
+calculateTimeDifference();
+setInterval(calculateTimeDifference, 1000);
+
+// Quotes array and display function
+const quotes = [
+    "In the tapestry of life, love is the most vibrant and intricate thread.",
+    "Together is a wonderful place to be.",
+    "Love is not just looking at each other, it's looking in the same direction."
+];
+
+function displayQuote() {
+    document.getElementById("quote").textContent = getRandomQuote();
+}
+
+function getRandomQuote() {
+    return quotes[Math.floor(Math.random() * quotes.length)];
+}
+
+displayQuote();
+setInterval(displayQuote, 5000); // Update quote every 5 seconds
+
+</script>
+</body>
+</html>
